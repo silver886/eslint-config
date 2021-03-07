@@ -1,0 +1,27 @@
+{
+  "name": "@silver886/eslint-config",
+  "version": "0.1.0",
+  "description": "ESLint configurations",
+  "main": "./index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/silver886/eslint-config.git"
+  },
+  "keywords": [
+    "eslint",
+    "config"
+  ],
+  "author": {
+    "name": "Leo Liu",
+    "email": "karta1041337@gmail.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/silver886/eslint-config/issues"
+  },
+  "homepage": "https://github.com/silver886/eslint-config#readme",
+  "peerDependencies": {
+    "eslint": "^7.20.0",
+    "@typescript-eslint/eslint-plugin": "^4.16.0"
+  }
+}
