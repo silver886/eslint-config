@@ -210,7 +210,6 @@ module.exports = {
         '@typescript-eslint/no-confusing-void-expression':    ['error'],
         '@typescript-eslint/no-dynamic-delete':               ['error'],
         '@typescript-eslint/no-extraneous-class':             ['error'],
-        '@typescript-eslint/no-implicit-any-catch':           ['error'],
         '@typescript-eslint/no-invalid-void-type':            ['error'],
         '@typescript-eslint/no-parameter-properties':         ['error'],
         '@typescript-eslint/no-require-imports':              ['error'],

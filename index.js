@@ -43,7 +43,7 @@ module.exports = {
         ],
         'guard-for-in':               ['error'],
         'max-classes-per-file':       ['warn'],
-        'no-alert':                   ['error'],
+        'no-alert':                   ['warn'],
         'no-caller':                  ['error'],
         'no-constructor-return':      ['error'],
         'no-div-regex':               ['error'],
@@ -102,7 +102,7 @@ module.exports = {
         'yoda':                   ['error'],
 
         // Strict Mode (https://eslint.org/docs/rules/#strict-mode)
-        'strict': 'off',
+        'strict': ['error', 'never'],
 
         // Variables (https://eslint.org/docs/rules/#variables)
         'init-declarations':    ['error'],
@@ -178,7 +178,7 @@ module.exports = {
                 ignoreStrings:          true,
                 ignoreTemplateLiterals: true,
                 ignoreRegExpLiterals:   true,
-                ignorePattern:          '^\\/\\*.*\\*\\/$',
+                ignorePattern:          '( *\\/\\* eslint-(dis|en)able .*\\*\\/$|.* \\/\\/ eslint-disable-line )',
             },
         ],
         'max-lines': ['warn',
