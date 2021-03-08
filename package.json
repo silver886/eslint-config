@@ -1,6 +1,6 @@
 {
   "name": "@silver886/eslint-config",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "ESLint configurations",
   "main": "./index.js",
   "repository": {
