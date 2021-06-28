@@ -157,7 +157,7 @@ module.exports = {
                 ],
                 format: ['strictCamelCase'],
                 filter: {
-                    regex: '^_$',
+                    regex: '(?:^_$|A[A-Z])',
                     match: false,
                 },
                 leadingUnderscore:  'forbid',
@@ -173,7 +173,7 @@ module.exports = {
                 ],
                 format: ['StrictPascalCase'],
                 filter: {
-                    regex: '^_$',
+                    regex: '(?:^_$|A[A-Z])',
                     match: false,
                 },
                 leadingUnderscore:  'forbid',
