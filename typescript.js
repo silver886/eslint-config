@@ -211,9 +211,15 @@ module.exports = {
         '@typescript-eslint/no-dynamic-delete':               ['error'],
         '@typescript-eslint/no-extraneous-class':             ['error'],
         '@typescript-eslint/no-invalid-void-type':            ['error'],
-        '@typescript-eslint/no-parameter-properties':         ['error'],
-        '@typescript-eslint/no-require-imports':              ['error'],
-        '@typescript-eslint/no-type-alias':                   ['error',
+        '@typescript-eslint/no-namespace':                    ['error',
+            {
+                allowDeclarations:    true,
+                allowDefinitionFiles: true,
+            },
+        ],
+        '@typescript-eslint/no-parameter-properties': ['error'],
+        '@typescript-eslint/no-require-imports':      ['error'],
+        '@typescript-eslint/no-type-alias':           ['error',
             {
                 allowAliases:          'in-unions-and-intersections',
                 allowCallbacks:        'always',
