@@ -8,6 +8,7 @@
         "iife",
         "linebreak",
         "nonoctal",
-        "plusplus"
+        "plusplus",
+        "pnpm"
     ]
 }
