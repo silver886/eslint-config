@@ -27,7 +27,7 @@ module.exports = {
                 allowAsStatement: true,
             },
         ],
-        'require-await':         ['off'],
+        'require-await': ['off'],
 
         //  Variables (https://eslint.org/docs/rules/#variables)
         'init-declarations':    ['off'],
