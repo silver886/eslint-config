@@ -21,7 +21,19 @@
   },
   "homepage": "https://github.com/silver886/eslint-config#readme",
   "peerDependencies": {
-    "eslint": "^8.5.0",
-    "@typescript-eslint/eslint-plugin": "^5.8.1"
+    "@typescript-eslint/eslint-plugin": "^5",
+    "@typescript-eslint/parser": "^5.14.0",
+    "eslint": "^8",
+    "eslint-import-resolver-node": "^0.3.6",
+    "eslint-import-resolver-typescript": "^2",
+    "eslint-plugin-import": "^2"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.15.0",
+    "@typescript-eslint/parser": "^5.15.0",
+    "eslint": "^8.11.0",
+    "eslint-import-resolver-node": "^0.3.6",
+    "eslint-import-resolver-typescript": "^2.5.0",
+    "eslint-plugin-import": "^2.25.4"
   }
 }

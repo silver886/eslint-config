@@ -1,10 +1,46 @@
+/* eslint-disable import/no-commonjs, import/unambiguous */
 module.exports = {
     extends: [
         './index',
     ],
+    parserOptions: {
+        project: '.eslint.tsconfig.json',
+    },
     plugins: [
         '@typescript-eslint',
     ],
+    settings: {
+        'import/extensions': [
+            '.js',
+            '.jsx',
+            '.ts',
+            '.tsx',
+        ],
+        'import/external-module-folders': [
+            'node_modules',
+            'node_modules/@types',
+        ],
+        'import/parsers': {
+            '@typescript-eslint/parser': [
+                '.ts',
+                '.tsx',
+            ],
+        },
+        'import/resolver': {
+            node: {
+                extensions: [
+                    '.js',
+                    '.jsx',
+                    '.ts',
+                    '.tsx',
+                ],
+            },
+            typescript: {
+                alwaysTryTypes: true,
+                project:        '.eslint.tsconfig.json',
+            },
+        },
+    },
     rules: {
         /* eslint-disable array-bracket-newline, no-magic-numbers */
         // Possible Errors (https://eslint.org/docs/rules/#possible-errors)
@@ -271,6 +307,10 @@ module.exports = {
         '@typescript-eslint/triple-slash-reference':      ['error'],
         '@typescript-eslint/type-annotation-spacing':     ['error'],
         '@typescript-eslint/unified-signatures':          ['error'],
+
+        // Import static analysis
+        'import/named': ['off'],
+
         /* eslint-enable */
     },
 };

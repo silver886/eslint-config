@@ -1,7 +1,19 @@
+/* eslint-disable import/no-commonjs, import/unambiguous */
 module.exports = {
     env: {
-        es2020: true,
+        es2021: true,
         node:   true,
+    },
+    parserOptions: {
+        sourceType: 'module',
+    },
+    plugins: [
+        'import',
+    ],
+    settings: {
+        'import/resolver': {
+            node: {},
+        },
     },
     rules: {
         /* eslint-disable array-bracket-newline, no-magic-numbers */
@@ -232,10 +244,15 @@ module.exports = {
         'no-unneeded-ternary':              ['error'],
         'no-whitespace-before-property':    ['error'],
         'nonblock-statement-body-position': ['error'],
-        'object-curly-newline':             ['error'],
-        'object-curly-spacing':             ['error'],
-        'object-property-newline':          ['error'],
-        'one-var':                          ['error',
+        'object-curly-newline':             ['error',
+            {
+                multiline:  true,
+                consistent: true,
+            },
+        ],
+        'object-curly-spacing':    ['error'],
+        'object-property-newline': ['error'],
+        'one-var':                 ['error',
             {
                 initialized:   'never',
                 uninitialized: 'always',
@@ -316,12 +333,79 @@ module.exports = {
         'rest-spread-spacing':     ['error'],
         'sort-imports':            ['error',
             {
-                allowSeparatedGroups: true,
+                allowSeparatedGroups:  true,
+                ignoreDeclarationSort: true,
             },
         ],
         'symbol-description':     ['error'],
         'template-curly-spacing': ['error'],
         'yield-star-spacing':     ['error'],
+
+        // Import static analysis
+        'import/no-unresolved':            ['error'],
+        'import/named':                    ['error'],
+        'import/default':                  ['error'],
+        'import/namespace':                ['error'],
+        'import/no-absolute-path':         ['error'],
+        'import/no-dynamic-require':       ['error'],
+        'import/no-self-import':           ['error'],
+        'import/no-useless-path-segments': ['error',
+            {
+                noUselessIndex: true,
+            },
+        ],
+        'import/no-relative-packages': ['error'],
+
+        // Import helpful warnings
+        'import/export':                     ['error'],
+        'import/no-named-as-default':        ['error'],
+        'import/no-named-as-default-member': ['error'],
+        'import/no-deprecated':              ['error'],
+        'import/no-extraneous-dependencies': ['error'],
+        'import/no-mutable-exports':         ['error'],
+        'import/no-unused-modules':          ['error'],
+
+        // Import module systems
+        'import/unambiguous':              ['error'],
+        'import/no-commonjs':              ['error'],
+        'import/no-amd':                   ['error'],
+        'import/no-nodejs-modules':        ['error'],
+        'import/no-import-module-exports': ['error'],
+
+        // Import style guide
+        'import/first':         ['error'],
+        'import/no-duplicates': ['error'],
+        'import/no-namespace':  ['error'],
+        'import/extensions':    ['error'],
+        'import/order':         ['error',
+            {
+                'groups': [
+                    'builtin',
+                    'external',
+                    'internal',
+                    'parent',
+                    'sibling',
+                    'index',
+                    'object',
+                    'type',
+                    'unknown',
+                ],
+                'alphabetize': {
+                    order: 'asc',
+                },
+                'newlines-between': 'never',
+            },
+        ],
+        'import/newline-after-import': ['error'],
+        'import/max-dependencies':     ['warn',
+            {
+                max:               8,
+                ignoreTypeImports: true,
+            },
+        ],
+        'import/no-unassigned-import':        ['error'],
+        'import/no-named-default':            ['error'],
+        'import/no-anonymous-default-export': ['error'],
         /* eslint-enable */
     },
 };
