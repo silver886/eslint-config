@@ -140,9 +140,12 @@ module.exports = {
             },
         ],
         'camelcase':            ['error'],
-        'capitalized-comments': ['error', 'always', {
-            ignorePattern: '^\\s*(?:spell-checker:)',
-        }],
+        'capitalized-comments': ['error',
+            'always',
+            {
+                ignorePattern: '^\\s*(?:spell-checker:)',
+            },
+        ],
         'comma-dangle': ['error',
             'always-multiline',
         ],
