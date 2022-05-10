@@ -196,7 +196,7 @@ module.exports = {
                 ignoreStrings:          true,
                 ignoreTemplateLiterals: true,
                 ignoreRegExpLiterals:   true,
-                ignorePattern:          '^(?: *\\/\\* eslint-(?:dis|en)able .+ \\*\\/|.* \\/\\/ eslint-disable(?:-next)?-line .+)$',
+                ignorePattern:          '^(?: *\\/\\* eslint-(?:dis|en)able .+ \\*\\/|(.| )*\\/\\/ eslint-disable(?:-next)?-line .+)$',
             },
         ],
         'max-lines': ['warn',
