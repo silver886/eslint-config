@@ -19,5 +19,7 @@ jobs:
       contents: read
       packages: write
     uses: silver886/github-actions/.github/workflows/release-npm.yaml@master
+    with:
+      test: false
     secrets:
       NPM: ${{ secrets.NPM }}
