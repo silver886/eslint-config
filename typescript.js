@@ -1,6 +1,10 @@
 /* eslint-disable import/no-commonjs, import/unambiguous */
 module.exports = {
     extends: [
+        'plugin:@typescript-eslint/recommended-type-checked',
+        'plugin:@typescript-eslint/strict-type-checked',
+        'plugin:@typescript-eslint/stylistic-type-checked',
+        'plugin:import/typescript',
         './index',
     ],
     parserOptions: {
@@ -111,12 +115,7 @@ module.exports = {
         '@typescript-eslint/keyword-spacing':             ['error'],
         '@typescript-eslint/lines-between-class-members': ['error'],
         '@typescript-eslint/no-dupe-class-members':       ['error'],
-        '@typescript-eslint/no-duplicate-imports':        ['error',
-            {
-                includeExports: true,
-            },
-        ],
-        '@typescript-eslint/no-empty-function': ['error',
+        '@typescript-eslint/no-empty-function':           ['error',
             {
                 allow: [
                     'protected-constructors',
@@ -264,9 +263,8 @@ module.exports = {
                 allowDefinitionFiles: true,
             },
         ],
-        '@typescript-eslint/no-parameter-properties': ['error'],
-        '@typescript-eslint/no-require-imports':      ['error'],
-        '@typescript-eslint/no-type-alias':           ['error',
+        '@typescript-eslint/no-require-imports': ['error'],
+        '@typescript-eslint/no-type-alias':      ['error',
             {
                 allowAliases:          'in-unions-and-intersections',
                 allowCallbacks:        'always',
@@ -283,6 +281,7 @@ module.exports = {
         '@typescript-eslint/no-unnecessary-type-arguments':          ['error'],
         '@typescript-eslint/no-unnecessary-type-constraint':         ['error'],
         '@typescript-eslint/non-nullable-type-assertion-style':      ['error'],
+        '@typescript-eslint/parameter-properties':                   ['error'],
         '@typescript-eslint/prefer-enum-initializers':               ['error'],
         '@typescript-eslint/prefer-for-of':                          ['error'],
         '@typescript-eslint/prefer-function-type':                   ['error'],
@@ -296,7 +295,7 @@ module.exports = {
         '@typescript-eslint/prefer-ts-expect-error':                 ['error'],
         '@typescript-eslint/promise-function-async':                 ['error'],
         '@typescript-eslint/require-array-sort-compare':             ['error'],
-        '@typescript-eslint/sort-type-union-intersection-members':   ['error'],
+        '@typescript-eslint/sort-type-constituents':                 ['error'],
         '@typescript-eslint/strict-boolean-expressions':             ['error',
             {
                 allowString:                                            true,
@@ -313,10 +312,6 @@ module.exports = {
         '@typescript-eslint/triple-slash-reference':      ['error'],
         '@typescript-eslint/type-annotation-spacing':     ['error'],
         '@typescript-eslint/unified-signatures':          ['error'],
-
-        // Import static analysis
-        'import/named': ['off'],
-
         /* eslint-enable */
     },
 };
