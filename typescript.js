@@ -2,7 +2,7 @@ import { flatConfigs as importConfig } from 'eslint-plugin-import-x';
 // eslint-disable-next-line import-x/no-unresolved
 import tseslint from 'typescript-eslint';
 // eslint-disable-next-line import-x/extensions
-import configs from './javascript.mjs';
+import configs from './javascript.js';
 
 export default tseslint.config({
     extends: [

@@ -2,7 +2,8 @@
   "name": "@silver886/eslint-config",
   "version": "3.0.1",
   "description": "ESLint configurations",
-  "main": "./index.mjs",
+  "type": "module",
+  "main": "./index.js",
   "types": "./index.d.ts",
   "repository": {
     "type": "git",

@@ -1,7 +1,8 @@
-/* eslint-disable import-x/extensions, import-x/no-nodejs-modules */
+/* eslint-disable import-x/extensions */
+// eslint-disable-next-line import-x/no-nodejs-modules
 import { readFileSync } from 'fs';
-import javascript from './javascript.mjs';
-import typescript from './typescript.mjs';
+import javascript from './javascript.js';
+import typescript from './typescript.js';
 
 export const configs = {
     javascript,
