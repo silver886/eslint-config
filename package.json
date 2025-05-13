@@ -3,6 +3,7 @@
   "version": "3.0.0",
   "description": "ESLint configurations",
   "main": "./index.mjs",
+  "types": "./index.d.ts",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/silver886/eslint-config.git"
