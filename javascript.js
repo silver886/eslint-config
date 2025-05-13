@@ -1,9 +1,8 @@
 /* eslint-disable max-lines */
 import jsConfig from '@eslint/js';
 import stylisticPlugin from '@stylistic/eslint-plugin';
-// eslint-disable-next-line import-x/no-unresolved
 import { defineConfig } from 'eslint/config';
-import { flatConfigs as importConfig } from 'eslint-plugin-import-x';
+import { createNodeResolver, flatConfigs as importConfig } from 'eslint-plugin-import-x';
 
 export default defineConfig({
     extends: [
@@ -26,6 +25,11 @@ export default defineConfig({
     },
     plugins: {
         stylisticPlugin,
+    },
+    settings: {
+        'import-x/resolver-next': [
+            createNodeResolver(),
+        ],
     },
     rules: {
         // Possible Errors (https://eslint.org/docs/rules/#possible-errors)

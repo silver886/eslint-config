@@ -1,5 +1,5 @@
+import { createTypeScriptImportResolver } from 'eslint-import-resolver-typescript';
 import { flatConfigs as importConfig } from 'eslint-plugin-import-x';
-// eslint-disable-next-line import-x/no-unresolved
 import tseslint from 'typescript-eslint';
 // eslint-disable-next-line import-x/extensions
 import configs from './javascript.js';
@@ -16,6 +16,11 @@ export default tseslint.config({
         parserOptions: {
             project: 'eslint.tsconfig.json',
         },
+    },
+    settings: {
+        'import-x/resolver-next': [
+            createTypeScriptImportResolver(),
+        ],
     },
     rules: {
         // Possible Errors (https://eslint.org/docs/rules/#possible-errors)
